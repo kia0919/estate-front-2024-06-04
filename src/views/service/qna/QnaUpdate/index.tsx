@@ -102,7 +102,7 @@ export default function QnaUpdate() {
 
     //                    effect                    //
     let effectFlag = false;
-    useEffect(() => {
+     useEffect(() => {
         if (!receptionNumber || !cookies.accessToken) return;
         if (!loginUserRole) return;
         if (effectFlag) return;

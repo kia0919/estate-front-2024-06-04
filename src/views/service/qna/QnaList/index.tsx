@@ -178,13 +178,15 @@ export default function QnaList() {
         if (!searchWord) return;
         if (!cookies.accessToken) return;
 
-        getSearchBoardListRequest(searchWord, cookies.accessToken).then(getSearchBoardListResponse);
+        getSearchBoardListRequest(searchWord, cookies.accessToken)
+        .then(getSearchBoardListResponse);
     };
 
     //                    effect                    //
     useEffect(() => {
         if (!cookies.accessToken) return;
-        getSearchBoardListRequest(searchWord, cookies.accessToken).then(getSearchBoardListResponse);
+        getSearchBoardListRequest(searchWord, cookies.accessToken)
+        .then(getSearchBoardListResponse);
     }, [isToggleOn]);
 
     useEffect(() => {

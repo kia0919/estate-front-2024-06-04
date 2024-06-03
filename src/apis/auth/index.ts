@@ -68,7 +68,8 @@ export const EmailAuthCheckRequest = async (requestBody: EmailAuthCheckRequestDt
 //! async: 비도기 함수 정의 / 매개변수 (requestBody)이고 해당 매개변수의 타입을 SignUpRequestDto타입 지정
 export const SignUpRequest = async (requestBody: SignUpRequestDto) => {
     //! axios.post: 서버 post요청 / SIGN_UP_REQUEST_URL: 회원가입 요청URL / requestBody: 요청 본문 데이터
-    const result = await axios.post(SIGN_UP_REQUEST_URL, requestBody)
+    const result = await axios
+        .post(SIGN_UP_REQUEST_URL, requestBody)
         //! requestHandler함수 호출, 제너릭타입은 ResponseDto 지정
         .then(requestHandler<ResponseDto>)
         //! 요청 실패시 requestErrorHandler함수 호출하여 에러처리함

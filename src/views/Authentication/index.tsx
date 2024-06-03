@@ -104,6 +104,7 @@ function SignIn({ onLinkClickHandler }: Props) {
 
     //                    event handler                    //
     const onIdChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
+        //# event.target.value: 입력 필드의 현재 값
         setId(event.target.value);
         setMessage('');
     };
@@ -403,7 +404,7 @@ export default function Authentication() {
     //                    event handler                    //
     const onLinkClickHandler = () => {
         if (page === 'sign-in') setPage('sign-up');
-        else setPage('sign-in');
+        else setPage('sign-in'); 
     };
 
     //                    constant                    //
